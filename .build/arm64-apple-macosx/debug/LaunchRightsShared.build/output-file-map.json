@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/primary.swiftdeps"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Audit.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/CodeSigning.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/HelperService.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Launcher.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Protocol.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/SystemInfo.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.dia"
+  }
+}

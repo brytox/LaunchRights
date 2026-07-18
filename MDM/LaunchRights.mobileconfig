@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  LaunchRights MDM profile — silent activation on managed Macs.
+
+  Contains two payloads:
+    1. System Extension policy  — pre-approves the ES system extension so the user
+       isn't prompted to allow it in System Settings.
+    2. Privacy (PPPC / TCC)     — grants the ES extension Full Disk Access, which
+       Endpoint Security clients require (else es_new_client -> NOT_PERMITTED).
+
+  BEFORE DEPLOYING, replace every ABCDE12345 with your real Team ID. The
+  CodeRequirement must match how the extension is actually signed.
+
+  Import into your MDM (Jamf: Computers > Configuration Profiles > Upload;
+  Intune: Devices > macOS > Configuration > Templates > Custom). Most MDMs
+  re-issue the PayloadUUIDs on upload — that's fine.
+-->
+<plist version="1.0">
+<dict>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadDisplayName</key>
+    <string>LaunchRights — System Extension &amp; Full Disk Access</string>
+    <key>PayloadDescription</key>
+    <string>Pre-approves the LaunchRights Endpoint Security system extension and grants it Full Disk Access.</string>
+    <key>PayloadOrganization</key>
+    <string>Jigsaw24</string>
+    <key>PayloadIdentifier</key>
+    <string>com.jigsaw24.launchrights.mdm</string>
+    <key>PayloadUUID</key>
+    <string>748C0F09-4596-4B3C-BBEB-8956ADA97045</string>
+    <key>PayloadContent</key>
+    <array>
+
+        <!-- 1. Allow the system extension to load without user approval -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.system-extension-policy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.jigsaw24.launchrights.mdm.sysext</string>
+            <key>PayloadUUID</key>
+            <string>1CC1AB0C-18AD-4FA4-96C2-3D8FED9B379C</string>
+            <key>PayloadDisplayName</key>
+            <string>Allowed System Extensions</string>
+            <!-- true lets users also approve other extensions; set false to lock down. -->
+            <key>AllowUserOverrides</key>
+            <true/>
+            <key>AllowedSystemExtensions</key>
+            <dict>
+                <!-- Team ID -> allowed extension bundle identifiers -->
+                <key>ABCDE12345</key>
+                <array>
+                    <string>com.jigsaw24.launchrights.es</string>
+                </array>
+            </dict>
+        </dict>
+
+        <!-- 2. Grant the ES extension Full Disk Access (required by Endpoint Security) -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.TCC.configuration-profile-policy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.jigsaw24.launchrights.mdm.pppc</string>
+            <key>PayloadUUID</key>
+            <string>A3309EEC-29AB-4145-B7FA-2570E8DD46B2</string>
+            <key>PayloadDisplayName</key>
+            <string>LaunchRights Full Disk Access</string>
+            <key>Services</key>
+            <dict>
+                <key>SystemPolicyAllFiles</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.jigsaw24.launchrights.es</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <!-- Must match the extension's designated requirement. Pin to your Team ID. -->
+                        <key>CodeRequirement</key>
+                        <string>identifier "com.jigsaw24.launchrights.es" and anchor apple generic and certificate leaf[subject.OU] = "ABCDE12345"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/primary.swiftdeps"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/launchrightsd-es/main.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.dia"
+  }
+}

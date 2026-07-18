@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "id": "com.corp.NetConfig",
+      "displayName": "Net Config (example — replace)",
+      "path": "C:\\Program Files\\NetConfig\\NetConfig.exe",
+      "publisher": "O=Contoso Ltd",
+      "thumbprint": "A1B2C3D4E5F60718293A4B5C6D7E8F90A1B2C3D4"
+    },
+    {
+      "id": "com.microsoft.WindowsTerminal",
+      "displayName": "Windows Terminal (demo — Microsoft-signed)",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal\\wt.exe",
+      "publisher": "O=Microsoft Corporation"
+    }
+  ]
+}

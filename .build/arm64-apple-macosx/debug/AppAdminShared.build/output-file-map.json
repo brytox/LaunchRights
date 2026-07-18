@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/primary.swiftdeps"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Audit.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Audit.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Audit~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Audit.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Audit.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/CodeSigning.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/CodeSigning.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/CodeSigning~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/CodeSigning.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/CodeSigning.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/HelperService.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/HelperService.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/HelperService.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/HelperService~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/HelperService.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/HelperService.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Launcher.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Launcher.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Launcher~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Launcher.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Launcher.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Protocol.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Protocol.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Protocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Protocol.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/Protocol.dia"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/SystemInfo.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/SystemInfo.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/SystemInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/SystemInfo.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminShared.build/SystemInfo.dia"
+  }
+}

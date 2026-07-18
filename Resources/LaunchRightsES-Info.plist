@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- CFBundleIdentifier MUST match the App ID your provisioning profile is for.
+         Create that App ID in the portal with the Endpoint Security capability
+         enabled (after the entitlement grant lands). -->
+    <key>CFBundleIdentifier</key>
+    <string>com.jigsaw24.launchrights.es</string>
+    <key>CFBundleName</key>
+    <string>LaunchRightsES</string>
+    <key>CFBundleExecutable</key>
+    <string>launchrightsd-es</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSBackgroundOnly</key>
+    <true/>
+</dict>
+</plist>

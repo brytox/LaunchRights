@@ -1,0 +1,1077 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.AppAdminShared-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources",
+      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppAdminShared",
+      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule",
+      "objects" : [
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/include/AppAdminShared-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appadmin"
+      ],
+      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift",
+        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift",
+        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift",
+        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift",
+        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+      ],
+      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.appadmin-agent-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources",
+      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "appadmin_agent",
+      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_agent.swiftmodule",
+      "objects" : [
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "appadmin_agent_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appadmin"
+      ],
+      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_agent.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+      ],
+      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.appadmin-menu-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources",
+      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "appadmin_menu",
+      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_menu.swiftmodule",
+      "objects" : [
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "appadmin_menu_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appadmin"
+      ],
+      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_menu.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+      ],
+      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.appadmind-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources",
+      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "appadmind",
+      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind.swiftmodule",
+      "objects" : [
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "appadmind_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appadmin"
+      ],
+      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+      ],
+      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.appadmind-es-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources",
+      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "appadmind_es",
+      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind_es.swiftmodule",
+      "objects" : [
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "appadmind_es_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "appadmin"
+      ],
+      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind_es.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+      ],
+      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "AppAdminShared" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppAdminShared",
+      "-package-name",
+      "appadmin",
+      "-c",
+      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift",
+      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift",
+      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift",
+      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift",
+      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift",
+      "-I",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/include/AppAdminShared-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appadmin",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "appadmin_agent" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "appadmin_agent",
+      "-package-name",
+      "appadmin",
+      "-c",
+      "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift",
+      "-I",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "appadmin_agent_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appadmin",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "appadmin_menu" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "appadmin_menu",
+      "-package-name",
+      "appadmin",
+      "-c",
+      "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift",
+      "-I",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "appadmin_menu_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appadmin",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "appadmind" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "appadmind",
+      "-package-name",
+      "appadmin",
+      "-c",
+      "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift",
+      "-I",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "appadmind_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appadmin",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "appadmind_es" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "appadmind_es",
+      "-package-name",
+      "appadmin",
+      "-c",
+      "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift",
+      "-I",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "appadmind_es_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "appadmin",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "AppAdminShared" : [
+
+    ],
+    "appadmin_agent" : [
+      "AppAdminShared"
+    ],
+    "appadmin_menu" : [
+      "AppAdminShared"
+    ],
+    "appadmind" : [
+      "AppAdminShared"
+    ],
+    "appadmind_es" : [
+      "AppAdminShared"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-agent.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-agent.product/Objects.LinkFileList"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-menu.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-menu.product/Objects.LinkFileList"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind-es.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind-es.product/Objects.LinkFileList"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.product/Objects.LinkFileList"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources"
+    },
+    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

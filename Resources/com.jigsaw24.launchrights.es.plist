@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jigsaw24.launchrights.es</string>
+
+    <key>Program</key>
+    <string>/usr/local/libexec/launchrightsd-es</string>
+
+    <!-- Same Mach service as the XPC flavour, so the menu app talks to whichever
+         daemon is installed. Only run one flavour at a time. -->
+    <key>MachServices</key>
+    <dict>
+        <key>com.jigsaw24.launchrights.helper</key>
+        <true/>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/var/log/launchrightsd-es.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/launchrightsd-es.log</string>
+</dict>
+</plist>

@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/appadmin_menu.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/appadmin_menu.o",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/primary.swiftdeps"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift": {
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.dia"
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- The Apple-granted Endpoint Security client entitlement. This must ALSO be
+         whitelisted by the embedded provisioning profile (see package-es.sh) or the
+         kernel refuses es_new_client with NOT_ENTITLED on a SIP-enabled Mac. -->
+    <key>com.apple.developer.endpoint-security.client</key>
+    <true/>
+</dict>
+</plist>

@@ -1,0 +1,3 @@
+module AppAdminUI {
+    header "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/AppAdminUI.build/include/AppAdminUI-Swift.h"
+}

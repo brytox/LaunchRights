@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/primary.swiftdeps"
+  },
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsUI/MenuController.swift": {
+    "dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.d",
+    "object": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swift.o",
+    "swiftmodule": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController~partial.swiftmodule",
+    "swift-dependencies": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swiftdeps",
+    "diagnostics": "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.dia"
+  }
+}

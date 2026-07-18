@@ -1,0 +1,293 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "LaunchRightsShared-arm64-apple-macosx-debug.module": ["<LaunchRightsShared-arm64-apple-macosx-debug.module>"]
+  "LaunchRightsUI-arm64-apple-macosx-debug.module": ["<LaunchRightsUI-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "launchrights-agent-arm64-apple-macosx-debug.exe": ["<launchrights-agent-arm64-apple-macosx-debug.exe>"]
+  "launchrights-agent-arm64-apple-macosx-debug.module": ["<launchrights-agent-arm64-apple-macosx-debug.module>"]
+  "launchrights-menu-arm64-apple-macosx-debug.exe": ["<launchrights-menu-arm64-apple-macosx-debug.exe>"]
+  "launchrights-menu-arm64-apple-macosx-debug.module": ["<launchrights-menu-arm64-apple-macosx-debug.module>"]
+  "launchrightsd-arm64-apple-macosx-debug.exe": ["<launchrightsd-arm64-apple-macosx-debug.exe>"]
+  "launchrightsd-arm64-apple-macosx-debug.module": ["<launchrightsd-arm64-apple-macosx-debug.module>"]
+  "launchrightsd-es-arm64-apple-macosx-debug.exe": ["<launchrightsd-es-arm64-apple-macosx-debug.exe>"]
+  "launchrightsd-es-arm64-apple-macosx-debug.module": ["<launchrightsd-es-arm64-apple-macosx-debug.module>"]
+  "main": ["<LaunchRightsShared-arm64-apple-macosx-debug.module>","<LaunchRightsUI-arm64-apple-macosx-debug.module>","<launchrights-agent-arm64-apple-macosx-debug.exe>","<launchrights-agent-arm64-apple-macosx-debug.module>","<launchrights-menu-arm64-apple-macosx-debug.exe>","<launchrights-menu-arm64-apple-macosx-debug.module>","<launchrightsd-arm64-apple-macosx-debug.exe>","<launchrightsd-arm64-apple-macosx-debug.module>","<launchrightsd-es-arm64-apple-macosx-debug.exe>","<launchrightsd-es-arm64-apple-macosx-debug.module>"]
+  "test": ["<LaunchRightsShared-arm64-apple-macosx-debug.module>","<LaunchRightsUI-arm64-apple-macosx-debug.module>","<launchrights-agent-arm64-apple-macosx-debug.exe>","<launchrights-agent-arm64-apple-macosx-debug.module>","<launchrights-menu-arm64-apple-macosx-debug.exe>","<launchrights-menu-arm64-apple-macosx-debug.module>","<launchrightsd-arm64-apple-macosx-debug.exe>","<launchrightsd-arm64-apple-macosx-debug.module>","<launchrightsd-es-arm64-apple-macosx-debug.exe>","<launchrightsd-es-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsUI/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/Sources/launchrights-agent/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/Sources/launchrights-menu/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/Sources/launchrightsd/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/Sources/launchrightsd-es/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent":
+    is-mutated: true
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu":
+    is-mutated: true
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd":
+    is-mutated: true
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es":
+    is-mutated: true
+commands:
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Audit.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/CodeSigning.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/HelperService.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Launcher.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Protocol.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/SystemInfo.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsUI/MenuController.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent-entitlement.plist"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent-entitlement.plist"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/main.swift.o"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent.product/Objects.LinkFileList"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu-entitlement.plist"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu-entitlement.plist"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/main.swift.o"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu.product/Objects.LinkFileList"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/launchrights-agent/main.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/launchrights-menu/main.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-entitlement.plist"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-entitlement.plist"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es-entitlement.plist"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es-entitlement.plist"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swift.o"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es.product/Objects.LinkFileList"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/launchrightsd/main.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/main.swift.o"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.product/Objects.LinkFileList"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/bob/Desktop/AppAdmin/Sources/launchrightsd-es/main.swift"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/sources"]
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/sources"
+
+  "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<LaunchRightsShared-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule"]
+    outputs: ["<LaunchRightsShared-arm64-apple-macosx-debug.module>"]
+
+  "<LaunchRightsUI-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsUI.swiftmodule"]
+    outputs: ["<LaunchRightsUI-arm64-apple-macosx-debug.module>"]
+
+  "<launchrights-agent-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<launchrights-agent-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<launchrights-agent-arm64-apple-macosx-debug.exe>"]
+
+  "<launchrights-agent-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_agent.swiftmodule"]
+    outputs: ["<launchrights-agent-arm64-apple-macosx-debug.module>"]
+
+  "<launchrights-menu-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<launchrights-menu-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<launchrights-menu-arm64-apple-macosx-debug.exe>"]
+
+  "<launchrights-menu-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_menu.swiftmodule"]
+    outputs: ["<launchrights-menu-arm64-apple-macosx-debug.module>"]
+
+  "<launchrightsd-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<launchrightsd-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<launchrightsd-arm64-apple-macosx-debug.exe>"]
+
+  "<launchrightsd-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd.swiftmodule"]
+    outputs: ["<launchrightsd-arm64-apple-macosx-debug.module>"]
+
+  "<launchrightsd-es-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<launchrightsd-es-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<launchrightsd-es-arm64-apple-macosx-debug.exe>"]
+
+  "<launchrightsd-es-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd_es.swiftmodule"]
+    outputs: ["<launchrightsd-es-arm64-apple-macosx-debug.module>"]
+
+  "C.LaunchRightsShared-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Audit.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/CodeSigning.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/HelperService.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Launcher.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/Protocol.swift","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/SystemInfo.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule"]
+    description: "Compiling Swift Module 'LaunchRightsShared' (6 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","LaunchRightsShared","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/include/LaunchRightsShared-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "C.LaunchRightsUI-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsUI/MenuController.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsUI.swiftmodule"]
+    description: "Compiling Swift Module 'LaunchRightsUI' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","LaunchRightsUI","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsUI.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/include/LaunchRightsUI-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "C.launchrights-agent-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent.product/Objects.LinkFileList"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/launchrights-agent"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug","-o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent","-module-name","launchrights_agent","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_launchrights_agent_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_agent.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.launchrights-agent-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent-entitlement.plist"]
+    outputs: ["<launchrights-agent-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/launchrights-agent"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent-entitlement.plist","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-agent"]
+
+  "C.launchrights-agent-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/launchrights-agent/main.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_agent.swiftmodule"]
+    description: "Compiling Swift Module 'launchrights_agent' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","launchrights_agent","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_agent.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/output-file-map.json","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_agent.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","launchrights_agent_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "C.launchrights-menu-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsUI.build/MenuController.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu.product/Objects.LinkFileList"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/launchrights-menu"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug","-o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu","-module-name","launchrights_menu","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_launchrights_menu_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsUI.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_menu.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.launchrights-menu-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu-entitlement.plist"]
+    outputs: ["<launchrights-menu-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/launchrights-menu"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu-entitlement.plist","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights-menu"]
+
+  "C.launchrights-menu-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/launchrights-menu/main.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsUI.swiftmodule","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_menu.swiftmodule"]
+    description: "Compiling Swift Module 'launchrights_menu' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","launchrights_menu","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrights_menu.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/output-file-map.json","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrights_menu.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","launchrights_menu_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "C.launchrightsd-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.product/Objects.LinkFileList"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/launchrightsd"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug","-o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd","-module-name","launchrightsd","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_launchrightsd_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.launchrightsd-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-entitlement.plist"]
+    outputs: ["<launchrightsd-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/launchrightsd"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-entitlement.plist","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd"]
+
+  "C.launchrightsd-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/launchrightsd/main.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd.swiftmodule"]
+    description: "Compiling Swift Module 'launchrightsd' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","launchrightsd","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/output-file-map.json","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","launchrightsd_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "C.launchrightsd-es-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Audit.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/CodeSigning.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/HelperService.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Launcher.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/Protocol.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/SystemInfo.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es.product/Objects.LinkFileList"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/launchrightsd-es"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug","-o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es","-module-name","launchrightsd_es","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_launchrightsd_es_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-lEndpointSecurity","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd_es.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.launchrightsd-es-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es-entitlement.plist"]
+    outputs: ["<launchrightsd-es-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/launchrightsd-es"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es-entitlement.plist","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd-es"]
+
+  "C.launchrightsd-es-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/launchrightsd-es/main.swift","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/LaunchRightsShared.swiftmodule","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/sources"]
+    outputs: ["/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/main.swift.o","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd_es.swiftmodule"]
+    description: "Compiling Swift Module 'launchrightsd_es' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","launchrightsd_es","-emit-dependencies","-emit-module","-emit-module-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules/launchrightsd_es.swiftmodule","-output-file-map","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/output-file-map.json","-incremental","-c","@/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/launchrightsd_es.build/sources","-I","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","launchrightsd_es_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","appadmin"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsShared/","/Users/bob/Desktop/AppAdmin/Sources/LaunchRightsUI/","/Users/bob/Desktop/AppAdmin/Sources/launchrights-agent/","/Users/bob/Desktop/AppAdmin/Sources/launchrights-menu/","/Users/bob/Desktop/AppAdmin/Sources/launchrightsd/","/Users/bob/Desktop/AppAdmin/Sources/launchrightsd-es/","/Users/bob/Desktop/AppAdmin/Package.swift","/Users/bob/Desktop/AppAdmin/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

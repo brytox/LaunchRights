@@ -1,0 +1,77 @@
+name: LaunchRights
+
+options:
+  bundleIdPrefix: com.jigsaw24
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "13.0"
+
+# Signing values come from the environment (see build.sh):
+#   DEVELOPMENT_TEAM  your Team ID
+#   SIGN_IDENTITY     "Developer ID Application" (dist) or "Apple Development" (local dev)
+#   HOST_PROFILE      provisioning profile name/UUID for com.jigsaw24.launchrights
+#   EXT_PROFILE       provisioning profile name/UUID for com.jigsaw24.launchrights.es
+settings:
+  base:
+    DEVELOPMENT_TEAM: ${DEVELOPMENT_TEAM}
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: ${SIGN_IDENTITY}
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_VERSION: "5.9"
+
+targets:
+
+  # ---- Shared code as static libraries (linked into each target, not embedded).
+  #      Keeps the same module names the SwiftPM sources import. ----
+  LaunchRightsShared:
+    type: library.static
+    platform: macOS
+    sources:
+      - path: ../Sources/LaunchRightsShared
+
+  LaunchRightsUI:
+    type: library.static
+    platform: macOS
+    sources:
+      - path: ../Sources/LaunchRightsUI
+    dependencies:
+      - target: LaunchRightsShared
+
+  # ---- Host app: embeds + activates the system extension ----
+  LaunchRights:
+    type: application
+    platform: macOS
+    sources:
+      - path: Host
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jigsaw24.launchrights
+        INFOPLIST_FILE: Host/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Host/LaunchRights.entitlements
+        PROVISIONING_PROFILE_SPECIFIER: ${HOST_PROFILE}
+    dependencies:
+      - target: LaunchRightsShared
+      - target: LaunchRightsUI
+      - target: com.jigsaw24.launchrights.es
+        embed: true
+        codeSign: true
+        copyFiles:
+          destination: wrapper
+          subpath: Contents/Library/SystemExtensions
+
+  # ---- Endpoint Security system extension (reuses launchrightsd-es sources) ----
+  com.jigsaw24.launchrights.es:
+    type: system-extension
+    platform: macOS
+    sources:
+      - path: ../Sources/launchrightsd-es
+    dependencies:
+      - target: LaunchRightsShared
+    settings:
+      base:
+        PRODUCT_NAME: com.jigsaw24.launchrights.es
+        PRODUCT_BUNDLE_IDENTIFIER: com.jigsaw24.launchrights.es
+        INFOPLIST_FILE: Extension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Extension/LaunchRightsES.entitlements
+        PROVISIONING_PROFILE_SPECIFIER: ${EXT_PROFILE}
+        OTHER_LDFLAGS: -lEndpointSecurity

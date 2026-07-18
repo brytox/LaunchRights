@@ -1,0 +1,3 @@
+module LaunchRightsShared {
+    header "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/debug/LaunchRightsShared.build/include/LaunchRightsShared-Swift.h"
+}

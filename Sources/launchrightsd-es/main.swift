@@ -50,6 +50,11 @@ func appBundlePath(fromExecutable exe: String) -> String? {
 /// imported as an 8-tuple; euid is index 1 (matches audit_token_to_euid()).
 func euid(of token: audit_token_t) -> uid_t { token.val.1 }
 
+/// Audit session id of the process performing the exec; index 6 matches
+/// audit_token_to_asid(). This is the user's login/GUI session — we join the
+/// elevated relaunch to it so its window appears on the right display.
+func asid(of token: audit_token_t) -> Int32 { Int32(bitPattern: token.val.6) }
+
 // MARK: - AUTH_EXEC handler
 
 // Every AUTH message MUST be answered before its deadline or ES may kill us, so
@@ -62,6 +67,7 @@ let handler: (OpaquePointer, UnsafePointer<es_message_t>) -> Void = { client, ms
     let exePath = esString(target.executable.pointee.path)
     let signingID = esString(target.signing_id)          // ≈ CFBundleIdentifier for signed apps
     let initiatorEUID = euid(of: msg.process.pointee.audit_token)
+    let initiatorASID = asid(of: msg.process.pointee.audit_token)
 
     @inline(__always) func allow() { es_respond_auth_result(client, msgPtr, ES_AUTH_RESULT_ALLOW, false) }
     @inline(__always) func deny()  { es_respond_auth_result(client, msgPtr, ES_AUTH_RESULT_DENY, false) }
@@ -81,7 +87,8 @@ let handler: (OpaquePointer, UnsafePointer<es_message_t>) -> Void = { client, ms
     // Block the user-context launch now; relaunch elevated out of band.
     deny()
     let snapshot = allowlist
-    let context = ElevationContext(requestingUID: initiatorEUID, source: "es")
+    let context = ElevationContext(requestingUID: initiatorEUID, source: "es",
+                                   auditSessionID: initiatorASID)
     elevationQueue.async {
         let outcome = Launcher.elevate(bundlePath: bundlePath, allowlist: snapshot,
                                        context: context, log: { logLine($0) })

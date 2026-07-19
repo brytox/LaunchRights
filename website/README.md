@@ -28,7 +28,7 @@ src/components/
   HowItWorks.vue            4-step sequence + mono audit-log sample
   FeatureGrid.vue           six product capabilities
   ComplianceSection.vue     framework → control → how-it-maps matrix
-  CtaSection.vue            "Book a demo" call to action
+  BetaSignup.vue            "Register your interest" beta form (name / org / email / use case)
   SiteFooter.vue            footer
 ```
 
@@ -38,9 +38,23 @@ Copy lives as plain data arrays/markup inside each component — no CMS. Common 
 
 - **Compliance mappings:** `ComplianceSection.vue` → `mappings` array.
 - **Features:** `FeatureGrid.vue` → `features` array.
-- **Contact email / demo link:** `CtaSection.vue`, `SiteFooter.vue`, `SiteNav.vue`
-  (currently `hello@launchrights.com` — change to a real inbox).
+- **Beta form:** `BetaSignup.vue`. Edit the `useCases` array for the dropdown options.
 - **Framework list:** `TrustStrip.vue` → `frameworks`.
+
+## Beta signup form
+
+`BetaSignup.vue` collects **name, organisation, work email, and use case** and is the
+site's single call to action (`#beta`). Two ways to receive submissions, set at the top
+of the component:
+
+- **`FORM_ENDPOINT`** — a URL that accepts a JSON `POST` (Formspree, Basin, a Cloudflare
+  Worker, your own API). When set, the form posts there and shows an inline success state.
+  Keeps the site fully static — no server of your own required.
+- **Fallback (default):** leave `FORM_ENDPOINT` empty and the form opens a pre-filled
+  email to **`BETA_INBOX`** (`beta@launchrights.com`) so it works with zero backend.
+  Change `BETA_INBOX` to your real beta inbox.
+
+Includes client-side validation and a hidden honeypot field for basic bot filtering.
 
 ## Design notes
 

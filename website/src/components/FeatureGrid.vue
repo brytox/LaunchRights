@@ -26,8 +26,8 @@ const features = [
     icon: 'cloud',
   },
   {
-    t: 'One policy, two platforms',
-    d: 'macOS today, Windows on the roadmap — the same allowlist model and the same audit format across your whole fleet.',
+    t: 'One policy, every platform',
+    d: 'macOS and Windows — the same allowlist model and the same audit format across your whole fleet.',
     icon: 'grid',
   },
 ]

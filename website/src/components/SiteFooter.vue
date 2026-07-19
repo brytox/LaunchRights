@@ -14,14 +14,13 @@ const cols = [
     h: 'Platforms',
     links: [
       { t: 'macOS — available', href: '#features' },
-      { t: 'Windows — on the roadmap', href: '#features' },
+      { t: 'Windows — available', href: '#features' },
     ],
   },
   {
-    h: 'Contact',
+    h: 'Beta',
     links: [
-      { t: 'Book a demo', href: '#demo' },
-      { t: 'hello@launchrights.com', href: 'mailto:hello@launchrights.com' },
+      { t: 'Request beta access', href: '#beta' },
     ],
   },
 ]
@@ -39,8 +38,8 @@ const cols = [
           <span class="brand__name">LaunchRights</span>
         </a>
         <p class="foot__tag">
-          Endpoint privilege management for managed Apple fleets. The app gets admin —
-          the user never does.
+          Endpoint privilege management for managed Mac and Windows fleets. The app gets
+          admin — the user never does.
         </p>
       </div>
 
@@ -55,8 +54,8 @@ const cols = [
     </div>
 
     <div class="wrap foot__base">
-      <span>© {{ year }} Jigsaw24 · LaunchRights</span>
-      <span class="foot__mono">macOS · Windows soon</span>
+      <span>© {{ year }} LaunchRights</span>
+      <span class="foot__mono">macOS · Windows</span>
     </div>
   </footer>
 </template>

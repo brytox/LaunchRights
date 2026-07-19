@@ -1,0 +1,83 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  LaunchRights beta signup API — a single Lambda behind an HTTP API that emails
+  the "register your interest" form submissions via Amazon SES.
+
+Parameters:
+  SenderEmail:
+    Type: String
+    Default: beta@launchrights.com
+    Description: >
+      The "From" address. Must be a verified SES identity — verifying the
+      launchrights.com domain covers this.
+  RecipientEmail:
+    Type: String
+    Default: bob@3voltsmax.com
+    Description: Inbox that receives beta signups.
+  AllowOrigin:
+    Type: String
+    Default: https://launchrights.com
+    Description: >
+      Primary CORS allowed origin (your production site). localhost dev origins
+      are always allowed in addition to this.
+  ApiKey:
+    Type: String
+    Default: 25b6962930f903d5d885bbef180635a160dcae9220ccdb82
+    NoEcho: true
+    Description: >
+      Shared secret the form must send as the "x-api-key" header. Must match
+      VITE_API_KEY in the website build. Override with your own value via
+      --parameter-overrides ApiKey=... (e.g. `openssl rand -hex 24`).
+
+Globals:
+  Function:
+    Runtime: nodejs22.x
+    Timeout: 10
+    MemorySize: 128
+
+Resources:
+  SignupApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - !Ref AllowOrigin
+          - http://localhost:5173
+          - http://localhost:4173
+        AllowHeaders:
+          - content-type
+          - x-api-key
+        AllowMethods:
+          - POST
+          - OPTIONS
+
+  SignupFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.handler
+      CodeUri: src/
+      Description: Validates a beta-signup form POST and emails it via SES.
+      Environment:
+        Variables:
+          SENDER_EMAIL: !Ref SenderEmail
+          RECIPIENT_EMAIL: !Ref RecipientEmail
+          API_KEY: !Ref ApiKey
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+              Resource: '*'
+      Events:
+        Post:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref SignupApi
+            Path: /signup
+            Method: POST
+
+Outputs:
+  ApiUrl:
+    Description: POST the form here. Use this as VITE_FORM_ENDPOINT in the website.
+    Value: !Sub 'https://${SignupApi}.execute-api.${AWS::Region}.amazonaws.com/signup'

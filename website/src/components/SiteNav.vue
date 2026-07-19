@@ -29,7 +29,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
       <nav class="nav__links" :class="{ 'is-open': open }">
         <a v-for="l in links" :key="l.href" :href="l.href" @click="open = false">{{ l.label }}</a>
-        <a class="btn nav__cta" href="#demo" @click="open = false">Book a demo</a>
+        <a class="btn nav__cta" href="#beta" @click="open = false">Request beta access</a>
       </nav>
 
       <button

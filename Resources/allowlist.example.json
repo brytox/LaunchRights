@@ -1,6 +1,11 @@
 {
   "apps": [
     {
+      "bundleIdentifier": "com.apple.Chess",
+      "requirement": "identifier \"com.apple.Chess\" and anchor apple",
+      "displayName": "Chess (default demo: Apple-signed system app)"
+    },
+    {
       "bundleIdentifier": "com.apple.ActivityMonitor",
       "requirement": "anchor apple",
       "displayName": "Activity Monitor (demo: Apple-signed system app)"
@@ -8,7 +13,8 @@
     {
       "bundleIdentifier": "com.jigsaw24.SomeAdminTool",
       "requirement": "anchor apple generic and certificate leaf[subject.OU] = \"YOURTEAMID\"",
-      "displayName": "Some Admin Tool (replace with your Team ID)"
+      "displayName": "Some Admin Tool (replace with your Team ID)",
+      "runAs": "_launchrights"
     }
   ]
 }

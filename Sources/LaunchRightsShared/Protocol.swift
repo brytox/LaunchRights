@@ -58,10 +58,22 @@ public struct AllowlistEntry: Codable {
     /// Optional friendly name for logs / future UI.
     public let displayName: String?
 
-    public init(bundleIdentifier: String, requirement: String, displayName: String? = nil) {
+    /// User to run the elevated app AS. Absent / "root" → root (full privilege,
+    /// and the only value that reliably shows a GUI window — see below). Any
+    /// other value is a local account name (e.g. a hidden admin service account
+    /// like "_launchrights"): the app runs with that account's privileges and
+    /// identity instead of root, which is smaller-blast-radius and subject to
+    /// TCC. NOTE: a GUI app run as a non-root user cannot connect to the console
+    /// user's WindowServer, so it launches but shows NO window — use this for
+    /// command-line / admin-task apps, keep root for GUI apps.
+    public let runAs: String?
+
+    public init(bundleIdentifier: String, requirement: String,
+                displayName: String? = nil, runAs: String? = nil) {
         self.bundleIdentifier = bundleIdentifier
         self.requirement = requirement
         self.displayName = displayName
+        self.runAs = runAs
     }
 }
 

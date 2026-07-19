@@ -6,10 +6,15 @@ public struct ElevationContext {
     public let requestingUID: uid_t
     /// Which flavour asked: "es" or "xpc".
     public let source: String
+    /// Audit session id of the login session the request came from. The elevated
+    /// app is joined to this session so its GUI reaches the right WindowServer.
+    /// 0 means "unknown" — the launch falls back to the daemon's own session.
+    public let auditSessionID: Int32
 
-    public init(requestingUID: uid_t, source: String) {
+    public init(requestingUID: uid_t, source: String, auditSessionID: Int32 = 0) {
         self.requestingUID = requestingUID
         self.source = source
+        self.auditSessionID = auditSessionID
     }
 }
 

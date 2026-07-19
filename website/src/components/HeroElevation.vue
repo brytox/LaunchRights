@@ -8,23 +8,23 @@
   <section id="top" class="hero">
     <div class="wrap hero__inner">
       <div class="hero__copy">
-        <p class="eyebrow">Endpoint privilege management · macOS · Windows soon</p>
+        <p class="eyebrow">Private beta · macOS &amp; Windows</p>
         <h1 class="h-xl">
           The app gets admin.<br />
           <span class="hl">The user never does.</span>
         </h1>
         <p class="lede">
           LaunchRights runs specific, IT-approved applications with elevated rights on
-          managed Macs — every launch verified by code signature and written to a
+          managed Macs and PCs — every launch verified by code signature and written to a
           tamper-proof audit log. Remove local admin from your fleet without removing
           anyone's ability to work.
         </p>
         <div class="hero__actions">
-          <a class="btn" href="#demo">Book a demo</a>
+          <a class="btn" href="#beta">Request beta access</a>
           <a class="btn btn--ghost" href="#how">See how it works</a>
         </div>
         <p class="hero__note">
-          Deployed by MDM · built for Jamf, Intune &amp; Addigy
+          Deployed by MDM · built for Jamf, Intune, Addigy &amp; more
         </p>
       </div>
 
@@ -33,8 +33,8 @@
            aria-label="Diagram: an approved app is lifted from the standard-user zone, through a signature-check gate, into the elevated zone; an unapproved app is held below the privilege line.">
         <div class="panel__grid" aria-hidden="true"></div>
 
-        <span class="zlabel zlabel--top">ELEVATED · root</span>
-        <span class="zlabel zlabel--bot">STANDARD · user</span>
+        <span class="zlabel zlabel--top">ELEVATED</span>
+        <span class="zlabel zlabel--bot">STANDARD</span>
 
         <!-- privilege line -->
         <div class="pline" aria-hidden="true">

@@ -17,68 +17,74 @@
 
   ],
   "swiftCommands" : {
-    "C.AppAdminShared-arm64-apple-macosx-release.module" : {
+    "C.LaunchRightsShared-arm64-apple-macosx-release.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources",
-      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Audit.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/CodeSigning.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/HelperService.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Launcher.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Protocol.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/SystemInfo.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/sources"
         }
       ],
       "isLibrary" : true,
-      "moduleName" : "AppAdminShared",
-      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule",
+      "moduleName" : "LaunchRightsShared",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule",
       "objects" : [
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
       ],
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
         "-whole-module-optimization",
         "-num-threads",
-        "8",
+        "4",
         "-serialize-diagnostics",
         "-O",
-        "-j8",
+        "-j4",
         "-DSWIFT_PACKAGE",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
         "-parseable-output",
         "-parse-as-library",
         "-emit-objc-header",
         "-emit-objc-header-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/include/AppAdminShared-Swift.h",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/include/LaunchRightsShared-Swift.h",
+        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -105,92 +111,98 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "appadmin"
+        "launchrights"
       ],
-      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/output-file-map.json",
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift",
-        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift",
-        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift",
-        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift",
-        "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Audit.swift",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/CodeSigning.swift",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/HelperService.swift",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Launcher.swift",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Protocol.swift",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/SystemInfo.swift"
       ],
-      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build",
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build",
       "wholeModuleOptimization" : true
     },
-    "C.appadmin-agent-arm64-apple-macosx-release.module" : {
+    "C.LaunchRightsUI-arm64-apple-macosx-release.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources",
-      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsUI/MenuController.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/sources"
         }
       ],
-      "isLibrary" : false,
-      "moduleName" : "appadmin_agent",
-      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_agent.swiftmodule",
+      "isLibrary" : true,
+      "moduleName" : "LaunchRightsUI",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsUI.swiftmodule",
       "objects" : [
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/MenuController.swift.o"
       ],
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
         "-whole-module-optimization",
         "-num-threads",
-        "8",
+        "4",
         "-serialize-diagnostics",
         "-O",
-        "-j8",
+        "-j4",
         "-DSWIFT_PACKAGE",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
         "-parseable-output",
-        "-Xfrontend",
-        "-entry-point-function-name",
-        "-Xfrontend",
-        "appadmin_agent_main",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/include/LaunchRightsUI-Swift.h",
+        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -217,72 +229,73 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "appadmin"
+        "launchrights"
       ],
-      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/output-file-map.json",
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/MenuController.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_agent.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsUI.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsUI/MenuController.swift"
       ],
-      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build",
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build",
       "wholeModuleOptimization" : true
     },
-    "C.appadmin-menu-arm64-apple-macosx-release.module" : {
+    "C.launchrights-agent-arm64-apple-macosx-release.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources",
-      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-agent/main.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/sources"
         }
       ],
       "isLibrary" : false,
-      "moduleName" : "appadmin_menu",
-      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_menu.swiftmodule",
+      "moduleName" : "launchrights_agent",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrights_agent.swiftmodule",
       "objects" : [
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/main.swift.o"
       ],
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
         "-whole-module-optimization",
         "-num-threads",
-        "8",
+        "4",
         "-serialize-diagnostics",
         "-O",
-        "-j8",
+        "-j4",
         "-DSWIFT_PACKAGE",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
         "-parseable-output",
         "-Xfrontend",
         "-entry-point-function-name",
         "-Xfrontend",
-        "appadmin_menu_main",
+        "launchrights_agent_main",
+        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -309,72 +322,73 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "appadmin"
+        "launchrights"
       ],
-      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/output-file-map.json",
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/main.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmin_menu.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrights_agent.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-agent/main.swift"
       ],
-      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build",
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build",
       "wholeModuleOptimization" : true
     },
-    "C.appadmind-arm64-apple-macosx-release.module" : {
+    "C.launchrights-menu-arm64-apple-macosx-release.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources",
-      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-menu/main.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsUI.swiftmodule"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/sources"
         }
       ],
       "isLibrary" : false,
-      "moduleName" : "appadmind",
-      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind.swiftmodule",
+      "moduleName" : "launchrights_menu",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrights_menu.swiftmodule",
       "objects" : [
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/main.swift.o"
       ],
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
         "-whole-module-optimization",
         "-num-threads",
-        "8",
+        "4",
         "-serialize-diagnostics",
         "-O",
-        "-j8",
+        "-j4",
         "-DSWIFT_PACKAGE",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
         "-parseable-output",
         "-Xfrontend",
         "-entry-point-function-name",
         "-Xfrontend",
-        "appadmind_main",
+        "launchrights_menu_main",
+        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -401,72 +415,73 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "appadmin"
+        "launchrights"
       ],
-      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/output-file-map.json",
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/main.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrights_menu.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-menu/main.swift"
       ],
-      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build",
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build",
       "wholeModuleOptimization" : true
     },
-    "C.appadmind-es-arm64-apple-macosx-release.module" : {
+    "C.launchrightsd-arm64-apple-macosx-release.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources",
-      "importPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd/main.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/AppAdminShared.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/sources"
         }
       ],
       "isLibrary" : false,
-      "moduleName" : "appadmind_es",
-      "moduleOutputPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind_es.swiftmodule",
+      "moduleName" : "launchrightsd",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrightsd.swiftmodule",
       "objects" : [
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/main.swift.o"
       ],
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
         "-whole-module-optimization",
         "-num-threads",
-        "8",
+        "4",
         "-serialize-diagnostics",
         "-O",
-        "-j8",
+        "-j4",
         "-DSWIFT_PACKAGE",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
         "-parseable-output",
         "-Xfrontend",
         "-entry-point-function-name",
         "-Xfrontend",
-        "appadmind_es_main",
+        "launchrightsd_main",
+        "-color-diagnostics",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -493,24 +508,117 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "appadmin"
+        "launchrights"
       ],
-      "outputFileMapPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/output-file-map.json",
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/main.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules/appadmind_es.swiftmodule"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrightsd.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd/main.swift"
       ],
-      "tempsPath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build",
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.launchrightsd-es-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/sources",
+      "importPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd-es/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/LaunchRightsShared.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "launchrightsd_es",
+      "moduleOutputPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrightsd_es.swiftmodule",
+      "objects" : [
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "4",
+        "-serialize-diagnostics",
+        "-O",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "launchrightsd_es_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "launchrights"
+      ],
+      "outputFileMapPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules/launchrightsd_es.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd-es/main.swift"
+      ],
+      "tempsPath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build",
       "wholeModuleOptimization" : true
     }
   },
@@ -518,37 +626,39 @@
 
   },
   "swiftTargetScanArgs" : {
-    "AppAdminShared" : [
+    "LaunchRightsShared" : [
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
-      "AppAdminShared",
+      "LaunchRightsShared",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-c",
-      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift",
-      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift",
-      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift",
-      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift",
-      "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Audit.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/CodeSigning.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/HelperService.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Launcher.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Protocol.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/SystemInfo.swift",
       "-I",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "-target",
       "arm64-apple-macosx13.0",
       "-whole-module-optimization",
       "-num-threads",
-      "8",
+      "4",
       "-serialize-diagnostics",
       "-O",
-      "-j8",
+      "-j4",
       "-DSWIFT_PACKAGE",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
       "-parseable-output",
       "-parse-as-library",
       "-emit-objc-header",
       "-emit-objc-header-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/include/AppAdminShared-Swift.h",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/include/LaunchRightsShared-Swift.h",
+      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -575,37 +685,38 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
-    "appadmin_agent" : [
+    "LaunchRightsUI" : [
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
-      "appadmin_agent",
+      "LaunchRightsUI",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-c",
-      "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsUI/MenuController.swift",
       "-I",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "-target",
       "arm64-apple-macosx13.0",
       "-whole-module-optimization",
       "-num-threads",
-      "8",
+      "4",
       "-serialize-diagnostics",
       "-O",
-      "-j8",
+      "-j4",
       "-DSWIFT_PACKAGE",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
       "-parseable-output",
-      "-Xfrontend",
-      "-entry-point-function-name",
-      "-Xfrontend",
-      "appadmin_agent_main",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/include/LaunchRightsUI-Swift.h",
+      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -632,37 +743,38 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
-    "appadmin_menu" : [
+    "launchrights_agent" : [
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
-      "appadmin_menu",
+      "launchrights_agent",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-c",
-      "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-agent/main.swift",
       "-I",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "-target",
       "arm64-apple-macosx13.0",
       "-whole-module-optimization",
       "-num-threads",
-      "8",
+      "4",
       "-serialize-diagnostics",
       "-O",
-      "-j8",
+      "-j4",
       "-DSWIFT_PACKAGE",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
       "-parseable-output",
       "-Xfrontend",
       "-entry-point-function-name",
       "-Xfrontend",
-      "appadmin_menu_main",
+      "launchrights_agent_main",
+      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -689,37 +801,38 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
-    "appadmind" : [
+    "launchrights_menu" : [
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
-      "appadmind",
+      "launchrights_menu",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-c",
-      "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-menu/main.swift",
       "-I",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "-target",
       "arm64-apple-macosx13.0",
       "-whole-module-optimization",
       "-num-threads",
-      "8",
+      "4",
       "-serialize-diagnostics",
       "-O",
-      "-j8",
+      "-j4",
       "-DSWIFT_PACKAGE",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
       "-parseable-output",
       "-Xfrontend",
       "-entry-point-function-name",
       "-Xfrontend",
-      "appadmind_main",
+      "launchrights_menu_main",
+      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -746,37 +859,38 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
-    "appadmind_es" : [
+    "launchrightsd" : [
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "-module-name",
-      "appadmind_es",
+      "launchrightsd",
       "-package-name",
-      "appadmin",
+      "launchrights",
       "-c",
-      "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd/main.swift",
       "-I",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/Modules",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
       "-target",
       "arm64-apple-macosx13.0",
       "-whole-module-optimization",
       "-num-threads",
-      "8",
+      "4",
       "-serialize-diagnostics",
       "-O",
-      "-j8",
+      "-j4",
       "-DSWIFT_PACKAGE",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/ModuleCache",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
       "-parseable-output",
       "-Xfrontend",
       "-entry-point-function-name",
       "-Xfrontend",
-      "appadmind_es_main",
+      "launchrightsd_main",
+      "-color-diagnostics",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -803,26 +917,88 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "appadmin",
+      "launchrights",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "launchrightsd_es" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "launchrightsd_es",
+      "-package-name",
+      "launchrights",
+      "-c",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd-es/main.swift",
+      "-I",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "4",
+      "-serialize-diagnostics",
+      "-O",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "launchrightsd_es_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "launchrights",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ]
   },
   "targetDependencyMap" : {
-    "AppAdminShared" : [
+    "LaunchRightsShared" : [
 
     ],
-    "appadmin_agent" : [
-      "AppAdminShared"
+    "LaunchRightsUI" : [
+      "LaunchRightsShared"
     ],
-    "appadmin_menu" : [
-      "AppAdminShared"
+    "launchrights_agent" : [
+      "LaunchRightsShared"
     ],
-    "appadmind" : [
-      "AppAdminShared"
+    "launchrights_menu" : [
+      "LaunchRightsUI",
+      "LaunchRightsShared"
     ],
-    "appadmind_es" : [
-      "AppAdminShared"
+    "launchrightsd" : [
+      "LaunchRightsShared"
+    ],
+    "launchrightsd_es" : [
+      "LaunchRightsShared"
     ]
   },
   "testDiscoveryCommands" : {
@@ -837,7 +1013,7 @@
     }
   },
   "writeCommands" : {
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -846,28 +1022,46 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Audit.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Audit.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/CodeSigning.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/CodeSigning.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Launcher.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/HelperService.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/Protocol.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Launcher.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/AppAdminShared/SystemInfo.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/Protocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsShared/SystemInfo.swift"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/sources"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/sources"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-agent.product/Objects.LinkFileList" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/LaunchRightsUI/MenuController.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/sources"
+    },
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights-agent.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -876,32 +1070,36 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/main.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-agent.product/Objects.LinkFileList"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights-agent.product/Objects.LinkFileList"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-menu.product/Objects.LinkFileList" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights-menu.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -910,32 +1108,40 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsUI.build/MenuController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/main.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin-menu.product/Objects.LinkFileList"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights-menu.product/Objects.LinkFileList"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -944,12 +1150,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-agent/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-agent/main.swift"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_agent.build/sources"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_agent.build/sources"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -958,12 +1164,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmin-menu/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrights-menu/main.swift"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmin_menu.build/sources"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrights_menu.build/sources"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind-es.product/Objects.LinkFileList" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd-es.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -972,32 +1178,36 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/main.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind-es.product/Objects.LinkFileList"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd-es.product/Objects.LinkFileList"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -1006,12 +1216,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd/main.swift"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/sources"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/sources"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.product/Objects.LinkFileList" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -1020,32 +1230,36 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Audit.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Audit.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/CodeSigning.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/CodeSigning.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Launcher.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/HelperService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/Protocol.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Launcher.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/AppAdminShared.build/SystemInfo.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/Protocol.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.build/main.swift.o"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/LaunchRightsShared.build/SystemInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.build/main.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind.product/Objects.LinkFileList"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd.product/Objects.LinkFileList"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -1054,12 +1268,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/bob/Desktop/AppAdmin/Sources/appadmind-es/main.swift"
+          "name" : "/Volumes/bob/Documents/GitHub/LaunchRights/Sources/launchrightsd-es/main.swift"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/appadmind_es.build/sources"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/launchrightsd_es.build/sources"
     },
-    "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+    "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
       "alwaysOutOfDate" : true,
       "inputs" : [
         {
@@ -1071,7 +1285,7 @@
           "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
         }
       ],
-      "outputFilePath" : "/Users/bob/Desktop/AppAdmin/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+      "outputFilePath" : "/Volumes/bob/Documents/GitHub/LaunchRights/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
     }
   }
 }

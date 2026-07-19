@@ -6,7 +6,7 @@ import ProblemSection from './components/ProblemSection.vue'
 import HowItWorks from './components/HowItWorks.vue'
 import FeatureGrid from './components/FeatureGrid.vue'
 import ComplianceSection from './components/ComplianceSection.vue'
-import CtaSection from './components/CtaSection.vue'
+import BetaSignup from './components/BetaSignup.vue'
 import SiteFooter from './components/SiteFooter.vue'
 </script>
 
@@ -20,7 +20,7 @@ import SiteFooter from './components/SiteFooter.vue'
     <HowItWorks />
     <FeatureGrid />
     <ComplianceSection />
-    <CtaSection />
+    <BetaSignup />
   </main>
   <SiteFooter />
 </template>

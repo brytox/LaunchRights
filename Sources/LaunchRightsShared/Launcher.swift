@@ -1,4 +1,5 @@
 import Foundation
+import CLaunchRightsSession
 
 /// The elevation decision + launch, shared by every privileged component
 /// (the XPC daemon and the Endpoint Security daemon). MUST be called from a
@@ -9,7 +10,7 @@ import Foundation
 public enum Launcher {
 
     public enum Outcome {
-        case launched(pid: pid_t, bundleID: String, displayName: String?)
+        case launched(pid: pid_t, bundleID: String, displayName: String?, user: String)
         case denied(String)   // policy said no (not allowlisted / bad signature)
         case failed(String)   // something broke (not a bundle, spawn errno, …)
 
@@ -17,7 +18,8 @@ public enum Launcher {
 
         public var message: String {
             switch self {
-            case .launched(let pid, let id, let name): return "launched \(name ?? id) as root (pid \(pid))"
+            case .launched(let pid, let id, let name, let user):
+                return "launched \(name ?? id) as \(user) (pid \(pid))"
             case .denied(let why): return "denied: \(why)"
             case .failed(let why): return "failed: \(why)"
             }
@@ -31,7 +33,7 @@ public enum Launcher {
             }
         }
 
-        var pid: Int32? { if case .launched(let pid, _, _) = self { return pid }; return nil }
+        var pid: Int32? { if case .launched(let pid, _, _, _) = self { return pid }; return nil }
     }
 
     /// Validate `bundlePath` against the allowlist + its code signature, and if it
@@ -81,9 +83,25 @@ public enum Launcher {
                           bundleID: bundleID, displayName: entry.displayName)
         }
 
-        switch spawnAsRoot(executablePath: executableURL.path) {
+        // Who to run as. Absent / "root" → root (today's behaviour). Any other
+        // value is a local account we drop privileges to.
+        let runAsUser = (entry.runAs?.isEmpty == false) ? entry.runAs! : "root"
+        if runAsUser != "root" {
+            guard getpwnam(runAsUser) != nil else {
+                return finish(.failed("unknown runAs user: \(runAsUser)"),
+                              bundleID: bundleID, displayName: entry.displayName)
+            }
+            // A GUI app can't reach the console user's WindowServer as a non-root
+            // user, so it will run headless. Flag it — silent no-window is worse.
+            log("note: running \(bundleID) as '\(runAsUser)' (not root); if it is a GUI app it will not show a window")
+        }
+
+        switch spawnElevated(executablePath: executableURL.path,
+                             auditSessionID: context.auditSessionID,
+                             runAsUser: runAsUser) {
         case .success(let pid):
-            return finish(.launched(pid: pid, bundleID: bundleID, displayName: entry.displayName),
+            return finish(.launched(pid: pid, bundleID: bundleID,
+                                    displayName: entry.displayName, user: runAsUser),
                           bundleID: bundleID, displayName: entry.displayName)
         case .failure(let why):
             return finish(.failed(why), bundleID: bundleID, displayName: entry.displayName)
@@ -92,17 +110,22 @@ public enum Launcher {
 
     private enum SpawnResult { case success(pid_t); case failure(String) }
 
-    private static func spawnAsRoot(executablePath: String) -> SpawnResult {
-        var pid: pid_t = 0
+    /// Launch the target joined to `auditSessionID`'s login session, optionally
+    /// dropping from root to `runAsUser`. `auditSessionID <= 0` degrades to a
+    /// plain fork/exec; `runAsUser == "root"` keeps full privilege (the only
+    /// value that reliably shows a GUI window).
+    private static func spawnElevated(executablePath: String,
+                                      auditSessionID: Int32,
+                                      runAsUser: String) -> SpawnResult {
         let argv: [UnsafeMutablePointer<CChar>?] = [strdup(executablePath), nil]
         defer { argv.forEach { free($0) } }
 
-        var fileActions: posix_spawn_file_actions_t?
-        posix_spawn_file_actions_init(&fileActions)
-        defer { posix_spawn_file_actions_destroy(&fileActions) }
-
-        let rc = posix_spawn(&pid, executablePath, &fileActions, nil, argv, environ)
-        if rc == 0 { return .success(pid) }
-        return .failure("posix_spawn failed (errno \(rc): \(String(cString: strerror(rc))))")
+        var err: Int32 = 0
+        // "root" → NULL so the shim stays root; otherwise it drops to the user.
+        let pid: pid_t = runAsUser == "root"
+            ? lr_spawn_elevated(executablePath, argv, auditSessionID, nil, &err)
+            : runAsUser.withCString { lr_spawn_elevated(executablePath, argv, auditSessionID, $0, &err) }
+        if pid > 0 { return .success(pid) }
+        return .failure("spawn failed (errno \(err): \(String(cString: strerror(err))))")
     }
 }
